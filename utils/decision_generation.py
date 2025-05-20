@@ -20,7 +20,7 @@ def decision_generation(args):
         decision = json.load(file)
     image = PIL.Image.open(args.image_path)
     genai.configure(api_key = args.api_key)
-    model = genai.GenerativeModel('gemini-pro-vision')
+    model = genai.GenerativeModel('gemini-2.5-pro-preview-05-06')
     base_prompt = prompt_template['decision_prompt']
     prompt = f"{base_prompt}\nPlease refer to the prompts and examples above to help me solve the following problem:\nQuestion: {args.query}\n"
     response = model.generate_content([prompt, image], stream=True, 

@@ -18,7 +18,7 @@ def execute_synthesis(args):
         decision = json.load(file)
     image = PIL.Image.open(args.image_path)
     genai.configure(api_key = args.api_key)
-    model = genai.GenerativeModel('gemini-pro-vision')
+    model = genai.GenerativeModel('gemini-2.5-pro-preview-05-06')
     
     supplementary_information = decision["supplementary_information"]
     

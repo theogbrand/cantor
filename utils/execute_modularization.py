@@ -18,7 +18,7 @@ def execute_modularization(args):
     image = PIL.Image.open(args.image_path)
     genai.configure(api_key = args.api_key)
     
-    model = genai.GenerativeModel('gemini-pro-vision')
+    model = genai.GenerativeModel('gemini-2.5-pro-preview-05-06')
     # 定义提示语
     decision["sub-answers"] =[]
     prompts = decision["sub-tasks"]
